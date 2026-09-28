@@ -10,4 +10,10 @@ data class PokemonDto(val id: Int, val name: String, val imageUrl: String) {
             imageUrl = imageUrl
         )
     }
+
+    companion object {
+        fun buildImageUrl(id: Int): String {
+            return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/$id.png"
+        }
+    }
 }
